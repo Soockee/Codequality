@@ -53,3 +53,55 @@ bi              bit (bei bitfelder)
 bi1,bi2,...     mehrere Bits; of auch u2, u3
 x               irgendein nicht näher spezifizierter typ
 x0              ordinaler typ
+O               objekt
+m               Datenfeld von objekten oder stuct (member)
+Beispiele mit daraus resultierende Namen:
+long lVal = atol(input);
+uint8_t u8Index;
+uint32_t u32Addr;
+bool boValid;
+void vClearScreen(void);
+const uint16t ru16length = 42u;
+typedef enum{
+    nenColorWhite,
+    nenColorBlue,
+    nenColorGreen,    <---- Komma nach dem letzten Aufzählungselement kann beim Diff helfen... (insertion/deletion)
+}tenColor;
+tenColor enColor;
+
+typedef struct{
+    uint16_t u16X, u16V;
+}tstCoordinates;
+tstCoordinates stCoordinates;
+
+typedef stuct{
+    unsigned int biValid : 1;
+    int i3A : 3;
+    unsigned int u2bi: 2;
+}tstBitfield;
+typedef union{
+    struct{
+        uint8_t uf_1,
+        uint8_t uf_1;
+    }stuint8,
+    struct{
+        uint16_t u16_1,
+    }
+}tunUint16;
+
+uint8_t au8Result[20] = {0};
+uint16_t *pn16Value;
+const char *pracFilename = "config";
+FILE *pfiConfig = fopen(pracFilename, "r");
+void (*pfuvFunction)(uint32-t u32Input);
+HANDLE hFile = INVALID_HANDLE_VALUE;
+size_t xolenght = stolen(pacName);
+#define nuBlockSize 32u
+std::map<int,int> oMap;
+Integer oInt = new Integer();
+
+In objektorientierten Sprachen werden die meisten Variablennamen das prefix 'o' haben.
+Spätestens bei Sprachen wie smalltalk und ruby wird es lächerlich, weil !alles! objekte sind(Selbst Klassen und Zahlen)
+Typfehler wie das indizieren von "normalen" Variablen oder die Zuweisung an Funktionen findet der Compiler selbst. Interessanter wird es bei großen Werten
+und kleinen Variablen. Hier findet in c eine implizite konvertierung statt. Der Compiler wird das akzeptieren. einem Entwickler wird vielleicht auffallen,
+dass bei u8 = u16+u8 daten verloren gehen koennten. Aber vielleicht auch nicht. 
