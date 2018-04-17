@@ -1,0 +1,40 @@
+Codequalität
+
+Code:
+Code ist im Rahmen dieser Veranstalung Quelltext in einer Hochsprache.
+Dabei sind Dateien, wie z.B. MakeFiles eingeschlossen.
+
+Qualität:
+Qualität ist die Summe aller Eigenschaften eines Objektes , Systems oder Prozesses.
+
+Unser Ziel ist eine hohe Codequalität - Warum? 
+Was bedeutet hohe Codequalität bzw. um welche Eigenschaften geht es?
+-> Möglichst wenige Fehler, mit möglichst geringer Auswirkung pro Fehler
+-> Lesbarkeit und Verständlichkeit
+-> Erweiter- und Änderbarkeit
+-> Gute Möglichkeiten zur Fehlersuche(Programm & Benutzerfehler) 
+
+Wie misst man Codequalität?
+Für viele Eigenschaften von Code gibt es mehr oder weniger sinnvolle Größen, Zeiten(LOC), nicht leere Zeilen, Anzahl Dateien bzw. Modulen, Functionpoints (Ein Maß für den Entwicklungsaufwand, besonders bei der Aufwandsschätzung),
+Verhätlnis von Kommentarzeilen zu Codezeilen (Weniger Sinnvoll->Einfach "unnötige" Kommentare pushen), Funktionslänge, Seiten an Dokumentationen uvm.
+!-> Nichts davon hängt "wirklich" mit Codequalität zusammen <-!
+
+Eine simple Größe, die zumindest einen ein Eindruck von der Komplexität des Codes gibt,
+ist WTFs pro Minute. Je einfacher verständlich und anpassbar der Code ist, umso geringer wird dieser Wert sein.
+Guter Code ist langweiliger Code.
+
+Eine schlechte Nachrich zu Beginn: "There is no silver bullet"--Frederich P. Brooks
+Wäre Softwareentwicklung einfach, würden Maschinen sie machen. Die Zahl der Programmfehler und verspäteten und überteuerten Projekte 
+zeigt aber, dass selbst menschen Schwierigkeiten haben. In gewisser Weise ist die schlechte Nachricht eine gute Nachricht -
+Für diejeniegen, die gelernt haben diese Komplexität zu beherrschen.
+
+Ob und wann Code "gut" ist, ist in vielen Fällen subjektiv. Daher kann diese Veranstalung nicht immer sagen, was "richtig" ist, soll aber verschiedene Möglichkeiten aufzeigen und zum Nachdenken anregen.
+
+Literatur:
+Der pragmatische programmierer; Hunt & Thomas
+Programmierpraxis; Kerninghan;Pike
+Code Craft - Practice of writing excellent code; Goodlife
+the art of readable Code; Boswell, Foucher; O'Reilly
+
+Leistungsnachweis:
+Geplant: Klausur      

@@ -1,0 +1,27 @@
+Preprocessor
+--------------------------------------------------------------------------------------------
+
+Es gibt drei Möglichkeiten, Preprocessoranweisungen einzurücken:
+-gar nicht 
+-nach #
+-vor #
+
+Bsp.
+#if CFG_A
+#include "cfg.h"
+#endif
+
+#if CFG_B
+#   include "cfg.h"
+#endif
+
+#if CFG_C
+    #include "cfg.h"
+#endif
+Die erste Art ist schlecht lesbar ( wie code auch ), die zweite erfordert manuelles Einruecken,
+außerdem wird es merkwuerdig, wenn solche Preprocessoranweisungen zwischen "normalen" anweisungen vorkommen.
+Das dritte Format orientiert sich an der Einruecken von Code,
+je nach editor und Einstellungen passiert das nicht automatisch oder die einrueckung geht nach automatischer formatierung kaputt.
+
+Programme wie indent astyle formatieren Einrueckung und allgemein Whitespaces entsprechend der Argumente, sowas ist sogar automatisch bei chechin moeglich. Ein guter Editor unterstuetzt ebenfalls hierbei.
+Im allgemeinen klappt das beides recht gut; Bei Preprocessoranweisungen bekommt man aber nicht immer das gewuenschte ergebnis

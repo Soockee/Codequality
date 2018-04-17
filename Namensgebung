@@ -1,0 +1,55 @@
+Namensgebung
+----------------------------------------------------------------------------------------------------
+
+"There are only two hard problems in computer science,  cache invalidation and naming things." Phil Karlton
+
+Beim Programmieren muss man sich dauernd neue Namen ausdenken, viele der zu benennenden Dinge sind auch sehr aehnlich
+Wenn sich spaeter herausstellt, dass ein anderer Name besser waere, dann sollte man ihn entsprechend aendern.
+
+Ungarische Notation
+------------------
+Die ungarische Notation wurde von Charles Simony bei Microsoft entwicklet "Apps Hungarian", die urspruengliche und sinnvolle Variante, 
+besteht darin, die Art einer Variablen in ihrem Namen anzugeben Bei Excel waren das etwa die Zeichenfolgen "rw" und "col" für Zeile/Row und Spalte/Column.
+Es handelte sich also um die Nummern der rw  und col, was zwar beides ganzzahlen sind, eine zuweisung der beiden ist allerdings weniger sinnvoll->(zahlen als namen).
+In word gab es "xl" und "xw" für horizontale Koordinaten relativ zum layout bzw. zum Fenster. Beides ganze Zahlen, aber nicht sinnvoll einander zuweisbar.
+In beiden Programmen kamen an vielen stellen Variablen für die anzahl von bytes vor(count of bytes), etwa puffergroeßen. 
+Eine Zuweisung wie:
+    xl = cb;
+ist damit direkt als irrsinnig erkennbar. Mann kann den Variablen am Namen ansehen wofuer sie verwendbar sind und wofuer nicht.
+Durchgesetzt hat sich allerdings "System Hungarian". Hier wird der Datentyp der Variablen im Namen angegeben. Diese information steht bereits im quelltext,
+und eine gute IDE macht sowas kenntlich. Der Compiler kennt sie sowieso. Die Namensgebung wird moeglicherweise einfacher oder schwieriger, weil entsprechende Regen zu
+beachten sind. Wird der Typ geaendert, muss auch der Name geaendert werden, aber nur fuer diese Variable, keine mit gleichen Namen in anderen Funktionen. Ein falscher Name kann außerdem
+zu falschen schluessen fuehren.
+In den meisten Faellen wird die Zusatzinformation im prefix des namen untergebracht.
+Beispiel für solche prefixe:
+i               (signed) int
+u, ui           unsigned int
+s, us           (unsigned) short int
+l, ul           (unsigned) long
+c               (plain) char
+i8,i16,i32,i64  (signed) int mit genau dieser anzahl bit      
+u8, u16...      (unsigned) int mit genau dieser anzahl bit
+bo              boolean
+v               void
+b               8-bit-type (byte)
+w               16-bit-type (word)
+dw              32-bit-type (double word)
+qw              64-bit-type (quad word)
+f               float
+d               double
+ld              long double
+r               const (ROM / Read Only) selten, weil der Compiler zuweisungen daran ablehnt.
+n               const (z.B. preprocessor -> hier wird kein speicherplatz belegt)
+t               durch typedef definierter typ
+en              enum
+st              struct 
+un              union
+a               array of ... bsp. u32 (arrayof unsign int)
+p               pointer to ... 
+pfi             pointer to file
+pfu             pointer to function returning
+h               handle 
+bi              bit (bei bitfelder)
+bi1,bi2,...     mehrere Bits; of auch u2, u3
+x               irgendein nicht näher spezifizierter typ
+x0              ordinaler typ
